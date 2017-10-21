@@ -1711,6 +1711,41 @@
 
 /* Section/Article */
 
+	#skills ul > li {
+	    min-height:30px;
+	    padding:3px 0
+	}
+
+	#abilities ul > li:hover {
+	    background:#273130
+	}
+
+	#skills ul > li .skills-title {
+	    display:inline-block;
+	    width:60%
+	}
+
+	#skills ul > li .skills-score {
+	    float:right
+	}
+
+	#skills ul > li .skills-score .glyphicon {
+	    color:#DFE0E0;
+	    font-size:14px;
+	    -webkit-transition:all .3s;
+	    -moz-transition:all .3s;
+	    -o-transition:all .3s;
+	    transition:all .3s
+	}
+
+	#skilld ul > li .skills-score .glyphicon.filled {
+	    color:#22A39F
+	}
+
+	#skills ul > li:hover .skills-score .glyphicon {
+	    margin-left:2px
+	}
+
 	section.special, article.special {
 		text-align: center;
 	}
