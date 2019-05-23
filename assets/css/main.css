@@ -16,3 +16,8 @@ html{
 	display: flex;
 	justify-content: center;
 }
+
+header{
+	color:#ffffff;
+	background-color: #042459;
+}
