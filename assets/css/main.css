@@ -4,3 +4,15 @@
 html{
 	font-family: 'Roboto', sans-serif;
 }
+
+/* this element stylizer is for the loading screen, set it to cover the entire web page, will implement later with JS*/
+.load-wrapper{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #000000;
+	display: flex;
+	justify-content: center;
+}
