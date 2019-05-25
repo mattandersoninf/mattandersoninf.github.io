@@ -1,26 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
+		<!--Head (contains information about the webpage)-->
 		<title>mattandersoninf.github.io</title>
 		<meta charset="utf-8">
-		<meta content="text/html; charset=utf-8" http-equiv="content-type">
-	    <meta content="text/javascript" http-equiv="content-script-type">
-	    <meta content="text/css" http-equiv="content-style-type">
 	    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport">
 	    <meta content="Matt Anderson" name="author">
 		
 		<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
     	<link href="images/favicon.ico" rel="icon" type="image/x-icon">
-		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-		<link href="assets/css/main.css" rel="stylesheet">
+		<link href="style.css" rel="stylesheet">
 	</head>
 	<body>
+		<!-- Body (The main part of the webpage)-->
 		<!-- This section will be used for showing the progress of loading the page, will implement later with JS
 		<div class="loader-wrapper">
 			<span class="loader"><span class="load-inner"></span>
 		</div>
 		-->
-		<div class="body-wrap">
+		<main class="body-wrap">
 			<div class="main-nav">
 				<ul class="nav">
 					<li class="nav-item"><a href="#home">Home</a></li>
@@ -29,13 +27,18 @@
 					<li class="nav-item"><a href="#contact">Contact</a></li>
 				</ul>
 			</div>
-			<header id="home"> 
-				<h2 id="home-header">Hi there. My name is <span class="name-highlight">Matt Anderson</span>.<br>
-									And welcome to my webstie!
-				</h2>
-			</header>
+			<section id="home">
+				<div class="container">
+					<img class="home-image"src = "images/railparkbackground.jpg" alt="Rail Park Background">
+					<h2 class="centered">Hi there. My name is <span class="name-highlight">Matt Anderson</span>.<br>
+										And welcome to my webstie!	</h2>
+					<!-- The target blank allows the href link to open up in a new tab-->
+					<div class="bottom-left" id="backgound-info-source"> Photo by <a href="https://www.instagram.com/weschengphoto/" target="_blank">Wes Cheng</a></div>
+				</div>
+			</section>
 			<section id="about">
-				<h2 id="body-header">About</h2>
+				<h2 class="body-header">About</h2>
+				<img class="about-image" src="images/profile.jpg">
 				<p>Currenly an electical engineer who likes to dabble in programming in my free time. 
 					Whether it be improving my knowledge with making websites, scripting to make my
 					career tasks or daily tasks easier, or collaborating on builds with friends:
@@ -51,9 +54,8 @@
 				</p>
 			</section>
 			<section id="projects-skills">
-				<h2 id="body-header">Projects</h2>
-				<!--- Add links to reddit project and cryptogeek into this section and display the time work timeline for each one off of github-->
-				<h2 id="body-header">Skills</h2>
+				<h2 class="body-header">Projects</h2>
+				<h2 class="body-header">Skills</h2>
 				<ul>
 					<li class='skill'>HTML</div>
 					<li class='skill'>CSS</div>
@@ -68,18 +70,17 @@
 				<!--  Add a message box so that viewers can contact me -->
 				
 			</section>
-		</div>
+		<!-- Footer (Bottom of the webpage)-->
+		<footer id="footer">
+			<section class="footer-wrap">
+				<ul class="icons">
+					<li><a href="https://twitter.com/mattandersoninf" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="https://github.com/mattandersoninf" class="icon fa-github"><span class="label">Github</span></a></li>
+					<li><a href="https://www.facebook.com/matt.anderson.397" class="icon fa-facebook"><span class="label">Facebook</span></a><img src=""</li>
+					<li><a href="https://www.instagram.com/mattandersoninf/" class="icon fa-instagram"><span class="label">Instagram</span><img src="images\black-see-through-instagram.png"></a></li>
+				</ul>
+			</section>
+		</footer>
+		</main>
 	</body>
-	<!-- Footer -->
-	<footer id="footer">
-		<section class="footer-wrap">
-			<ul class="icons">
-				<li><a href="https://twitter.com/mattandersoninf" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="https://github.com/mattandersoninf" class="icon fa-github"><span class="label">Github</span></a></li>
-				<li><a href="https://www.facebook.com/matt.anderson.397" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-				<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-				<li><a href="https://www.instagram.com/mattandersoninf/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-			</ul>
-		</section>
-	</footer>
 </html>
