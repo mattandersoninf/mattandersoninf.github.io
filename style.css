@@ -3,12 +3,33 @@
 
 html{
 	font-family: 'Roboto', sans-serif;
-	font-stretch: ultra-expanded;
+}
+
+header{
+	text-align:center;
+	background: url("images/railparkbackgroundimg.jpg") no-repeat top center;
+	background-size: cover;
+	overflow: hidden;
+	padding: 120px 0px 10px 0px;
+	line-height: 1.5;
+}
+
+header .profile-image{
+	width:150px;
+	height:150px;
+	border-radius: 50%;
+	border: 3px solid #ffffff;
+	transition: all .5s;
+}
+
+header .profile-image:hover {
+	transform: scale(1.2) rotate(360deg);
 }
 
 * {
 	box-sizing: border-box; 
 }
+
 
 body{
 	margin:0;
@@ -22,11 +43,11 @@ a{
 	color: #ffffff;
 }
 
-a.photo-cred{
+a.photographer{
 	transition: 0.3s;
 }
 
-a.photo-cred:hover{
+a.photographer:hover{
 	color:#0040ff;
 }
 
@@ -41,20 +62,19 @@ footer{
 	color: #a9a9a9;
 }
 
-h2{
+h2.body-header, h2.footer-header{
+	text-align: center;
+}
+
+h2.profile-message{
 	text-align:center;
+	padding-top: 50px;
+	padding-bottom: 400px;
 }
 
 section{
 	padding: 0px;
 	margin: 0 auto;
-}
-
-.profile-image{
-	display: block;
-	margin-left: auto;
-	margin-right:  auto;
-	width: 25%;
 }
 
 li{
@@ -69,6 +89,11 @@ li{
 li.nav-item, li.social-media, li.skill{
 	padding: 5px 10px 5px 10px;
 	display: inline;
+	transition: all .3s;
+}
+
+li.nav-item:hover{
+	transform:scale(1.5);
 }
 
 li.skill{
@@ -83,6 +108,15 @@ li.skill{
 .company, .title, .yr{
 	padding: 5px 0px 5px 0px;
 	text-align: left;
+}
+
+img.background-image{
+	display:block;
+	margin-left: auto;
+	margin-right:auto;
+	height: 200px;
+	padding: 10px 15px 10px 15px;
+
 }
 
 li.skill:hover{
@@ -105,7 +139,7 @@ p.copyright{
 }
 
 ul.exps{
-	padding: 20px 100px 20px 100px;
+	padding: 20px 190px 20px 10px;
 	background: #00e025;
 	color: #ffffff;
 	border-radius: 3px;
@@ -128,6 +162,7 @@ ul.footer-icons{
 	position: absolute;
 	bottom: 3%;
 	padding-left: 15px;
+	padding-top: 0px;
 }
 
 .card {
@@ -153,12 +188,6 @@ ul.footer-icons{
 	transform: translate(-50%, -50%);
 }
 
-.container {
-	position: relative;
-	text-align: center;
-	color: #ffffff;
-	padding: 0%;
-}
 
 .home-image{
 	width: 100%;
@@ -173,6 +202,11 @@ ul.footer-icons{
 
 .name-highlight{
 	color: #0040ff;
+}
+
+.photo-cred{
+	text-align: left;
+	padding: 10px 15px 30px 15px;
 }
 
 .sm-icon{
@@ -195,4 +229,6 @@ ul.footer-icons{
 		justify-content: space-around;
 		margin: 0 auto;
 	}
+
+	
 }
