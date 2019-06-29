@@ -246,9 +246,12 @@ ul.footer-icons{
 /* For each of the flex boxes, make sure to be adjustable for the top background image in particular and make sure the subsection paragraphs don't collapse on themselves*/
 
 @media screen and (min-width: 320px){
-	.flex{
-		
+	
+	.main-nav{
+		position: fixed;
+		z-index: 20px;
 	}
+
 }
 
 @media screen and (min-width: 768px){
