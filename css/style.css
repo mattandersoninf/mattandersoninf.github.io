@@ -250,6 +250,7 @@ ul.footer-icons{
 	.main-nav{
 		position: fixed;
 		z-index: 20px;
+		padding: 0px 10px 5px 10px;
 	}
 
 }
