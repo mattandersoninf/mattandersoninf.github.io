@@ -86,7 +86,15 @@ li{
 	margin-bottom: 10px;
 }
 
-li.nav-item, li.social-media, li.skill{
+li.nav-item{
+	border-color: #ffffff;
+	padding: 5px 3px 5px 3px;
+	display: inline;
+	transition: all .3s;
+	text-align: center;
+}
+
+li.social-media, li.skill{
 	padding: 5px 10px 5px 10px;
 	display: inline;
 	transition: all .3s;
@@ -143,6 +151,7 @@ li.nav-item:hover{
 p{
 	padding: 3px;
 }
+
 p.copyright{
 	color: #000000;
 	text-align:center;
@@ -167,6 +176,11 @@ ul.exps:hover{
 
 ul.footer-icons{
 	display: inline;
+}
+
+ul.nav{
+	position: relative;
+	padding-left: 0px;
 }
 
 .bottom-left {
@@ -209,6 +223,7 @@ ul.footer-icons{
 	height: 85px;
 	background: #000000;
 	text-align:center;
+	position: fixed;
 }
 
 .name-highlight{
@@ -227,8 +242,11 @@ ul.footer-icons{
 .table{
 	padding-top: 15px;
 	padding-bottom: 15px;
+	margin-left: auto;
+	margin-right: auto;
 	display: table;
 	margin: 0 auto;
+	position: fixed;
 }
 
 @media screen and (min-width: 720px) {
@@ -250,7 +268,20 @@ ul.footer-icons{
 	.main-nav{
 		position: fixed;
 		z-index: 20px;
-		padding: 0px 10px 5px 10px;
+		padding: 5px 0px 5px 0px;
+	}
+
+	.profile-image{
+		margin-top: 60px;
+	}
+
+	.nav-item{
+		padding: 3px 5px 3px 5px;
+	}
+
+	header{
+		width: 100%;
+		overflow: auto;
 	}
 
 }
