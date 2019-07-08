@@ -268,9 +268,7 @@ ul.nav{
 	
 	.main-nav{
 		position: fixed;
-		z-index: 20px;
 		padding: 5px 0px 5px 0px;
-		
 		justify-content: center;
 	}
 
