@@ -12,41 +12,21 @@
 
 /* jumbotron */
 /* table */
-.bg-purple {
-  background-color: #8000ff;
-}
-
-.bg-pink {
-  background-color: fuchsia;
-}
-
-.bg-magenta {
-  background-color: #ff0080;
-}
-
-.bg-orange {
-  background-color: #ff8000;
-}
-
-.bg-yellow {
-  background-color: yellow;
-}
-
 .board {
   background-color: #212529;
 }
 
 td {
-  border: 2px solid #212529;
+  border: 1px solid transparent;
   padding-top: 3%;
 }
 
 .animate-table-cell {
-  animation-name: cycle-peach-color;
-  animation-duration: 1.5s;
+  animation: cyclePeachColor 1.5s forwards linear;
+  pointer-events: none;
 }
 
-@keyframes cycle-peach-color {
+@keyframes cyclePeachColor {
   0% {
     background-color: #8000ff;
     border-radius: 50%;
@@ -68,7 +48,7 @@ td {
     border-radius: 10%;
   }
   100% {
-    background-color: #212529;
+    background-color: transparent;
     border-radius: 1%;
   }
 }
