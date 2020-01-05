@@ -19,6 +19,7 @@
 td {
   border: 1px solid transparent;
   padding-top: 3%;
+  z-index: 2;
 }
 
 .animate-table-cell {
@@ -28,11 +29,11 @@ td {
 
 @keyframes cyclePeachColor {
   0% {
-    background-color: #8000ff;
+    background-color: yellow;
     border-radius: 50%;
   }
   20% {
-    background-color: fuchsia;
+    background-color: #ff8000;
     border-radius: 40%;
   }
   40% {
@@ -40,11 +41,11 @@ td {
     border-radius: 30%;
   }
   60% {
-    background-color: #ff8000;
+    background-color: fuchsia;
     border-radius: 20%;
   }
   80% {
-    background-color: yellow;
+    background-color: #8000ff;
     border-radius: 10%;
   }
   100% {

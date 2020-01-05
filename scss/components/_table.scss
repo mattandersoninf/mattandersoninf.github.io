@@ -7,6 +7,7 @@
 td{
     border: 1px solid $table-td-border-color;
     padding-top: 3%;
+    z-index: 2;
 }
 
 .animate-table-cell{
@@ -16,11 +17,11 @@ td{
 
 @keyframes cyclePeachColor{
     0% { 
-        background-color: $bg-purple-background-color;
+        background-color: $bg-yellow-background-color;
         border-radius: 50%;
     }
     20% { 
-        background-color: $bg-pink-background-color;
+        background-color: $bg-orange-background-color;
         border-radius: 40%;
     }
     40% { 
@@ -28,11 +29,11 @@ td{
         border-radius: 30%;
     }
     60% { 
-        background-color: $bg-orange-background-color;
+        background-color: $bg-pink-background-color;
         border-radius: 20%;
     }
     80% { 
-        background-color: $bg-yellow-background-color;
+        background-color: $bg-purple-background-color;
         border-radius: 10%;
     }
     100% { 
