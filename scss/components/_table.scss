@@ -1,0 +1,62 @@
+/* table */
+
+.bg-purple{
+    background-color: $bg-purple-background-color;
+}
+
+.bg-pink{
+    background-color: $bg-pink-background-color;
+}
+
+.bg-magenta{
+    background-color: $bg-magenta-background-color;
+}
+
+.bg-orange{
+    background-color: $bg-orange-background-color;
+}
+
+.bg-yellow{
+    background-color: $bg-yellow-background-color;
+}
+
+.board{
+    background-color: $table-background-color;
+}
+
+td{
+    border: 2px solid $table-td-border-color;
+    padding-top: 3%;
+}
+
+.animate-table-cell{
+    animation-name: cycle-peach-color;
+    animation-duration: 1.5s;
+}
+
+@keyframes cycle-peach-color{
+    0% { 
+        background-color: $bg-purple-background-color;
+        border-radius: 50%;
+    }
+    20% { 
+        background-color: $bg-pink-background-color;
+        border-radius: 40%;
+    }
+    40% { 
+        background-color: $bg-magenta-background-color;
+        border-radius: 30%;
+    }
+    60% { 
+        background-color: $bg-orange-background-color;
+        border-radius: 20%;
+    }
+    80% { 
+        background-color: $bg-yellow-background-color;
+        border-radius: 10%;
+    }
+    100% { 
+        background-color: $table-td-border-color;
+        border-radius: 1%;
+    }
+}

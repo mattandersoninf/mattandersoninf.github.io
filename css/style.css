@@ -1,3 +1,4 @@
+/* variables */
 /* button */
 .bg-turq {
   color: white;
@@ -7,6 +8,69 @@
 .bg-turq:hover {
   color: white;
   background-color: #00c3ff;
+}
+
+/* jumbotron */
+/* table */
+.bg-purple {
+  background-color: #8000ff;
+}
+
+.bg-pink {
+  background-color: fuchsia;
+}
+
+.bg-magenta {
+  background-color: #ff0080;
+}
+
+.bg-orange {
+  background-color: #ff8000;
+}
+
+.bg-yellow {
+  background-color: yellow;
+}
+
+.board {
+  background-color: #212529;
+}
+
+td {
+  border: 2px solid #212529;
+  padding-top: 3%;
+}
+
+.animate-table-cell {
+  animation-name: cycle-peach-color;
+  animation-duration: 1.5s;
+}
+
+@keyframes cycle-peach-color {
+  0% {
+    background-color: #8000ff;
+    border-radius: 50%;
+  }
+  20% {
+    background-color: fuchsia;
+    border-radius: 40%;
+  }
+  40% {
+    background-color: #ff0080;
+    border-radius: 30%;
+  }
+  60% {
+    background-color: #ff8000;
+    border-radius: 20%;
+  }
+  80% {
+    background-color: yellow;
+    border-radius: 10%;
+  }
+  100% {
+    background-color: #212529;
+    border-radius: 1%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
