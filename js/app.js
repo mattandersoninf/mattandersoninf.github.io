@@ -10,10 +10,12 @@ const animatedTable = document.querySelector("table.board");
  * ***********************************************************/
 animatedTable.addEventListener("click", function(){
     
-    if (event.target.tagName == "TD" && !(event.target.classList.contains("animate-table-cell"))){
+    // && !(event.target.classList.contains("animate-table-cell"))
+    if (event.target.tagName == "TD" ){
         
-        pulsePeachColor(event.target, 4);
+        pulsePeachColor(event.target.id.substring(0, event.target.id.indexOf("-")), event.target.id.substring(event.target.id.indexOf("-")+1, event.target.id.length),3);
     
+        // tableCell.id.substring(0,tableCell.id.indexOf("-")), tableCell.id.substring(tableCell.id.indexOf("-")+1, tableCell.id.length)
     }
 
 });
@@ -22,13 +24,34 @@ animatedTable.addEventListener("click", function(){
  *  PULSE PEACH FUNCTION
  *  
  * ***********************************************************/
-function pulsePeachColor(tableCell, pulseDepth){
-    let tableCellCoordinates = [tableCell.id.substring(0,tableCell.id.indexOf("-")), tableCell.id.substring(tableCell.id.indexOf("-")+1, tableCell.id.length)];
-    if(pulseDepth > -1){
-        tableCell.classList.add("animate-table-cell");
+function pulsePeachColor(rowNum, colNum, pulseDepth){
+    
+    if(pulseDepth > -1 && verifyCoordinates(rowNum, colNum)){
+
+        document.getElementById(rowNum+"-"+colNum).classList.add("animate-table-cell");
+        
         window.setTimeout(function() {
-            tableCell.classList.remove('animate-table-cell');
+            document.getElementById(rowNum+"-"+colNum).classList.remove('animate-table-cell');
         },1500);
+
+        pulsePeachColor(rowNum-1,colNum,pulseDepth-1);
+        pulsePeachColor(rowNum+1,colNum,pulseDepth-1);
+        pulsePeachColor(rowNum,colNum-1,pulseDepth-1);
+        pulsePeachColor(rowNum,colNum+1,pulseDepth-1);
+
     }
 
+}
+
+/*************************************************************
+ *  VERIFY COORDINATES FUNCTION
+ *  
+ * ***********************************************************/
+function verifyCoordinates(rowNum, colNum){
+    if (document.getElementById(rowNum+"-"+colNum) != null){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
