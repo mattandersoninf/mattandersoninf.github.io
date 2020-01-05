@@ -4,6 +4,12 @@
 const animatedTable = document.querySelector("table.board");
 
 /*************************************************************
+ *  ON LOAD ANIMATION
+ *  When the page is first loaded, show three random points  
+ *  on the animated to demonstrate the pulse effect. 
+ * ***********************************************************/
+
+/*************************************************************
  *  ANIMATED TABLE EVENT LISTENER
  *  If the element pressed is a table cell and that table cell
  *  isn't already animated, then call the pulsePeach function.
@@ -32,13 +38,16 @@ function pulsePeachColor(rowNum, colNum, pulseDepth){
         
         window.setTimeout(function() {
             document.getElementById(rowNum+"-"+colNum).classList.remove('animate-table-cell');
-        },1500);
 
-        pulsePeachColor(rowNum-1,colNum,pulseDepth-1);
-        pulsePeachColor(rowNum+1,colNum,pulseDepth-1);
-        pulsePeachColor(rowNum,colNum-1,pulseDepth-1);
-        pulsePeachColor(rowNum,colNum+1,pulseDepth-1);
-
+        },500);
+        
+        window.setTimeout(function() {
+            pulsePeachColor(parseInt(rowNum,10)+1,parseInt(colNum,10),pulseDepth-1);
+            pulsePeachColor(parseInt(rowNum,10),parseInt(colNum,10)+1,pulseDepth-1);
+            pulsePeachColor(parseInt(rowNum,10)-1,parseInt(colNum,10),pulseDepth-1);
+            pulsePeachColor(parseInt(rowNum,10),parseInt(colNum,10)-1,pulseDepth-1); 
+        },500); 
+        
     }
 
 }
@@ -48,7 +57,7 @@ function pulsePeachColor(rowNum, colNum, pulseDepth){
  *  
  * ***********************************************************/
 function verifyCoordinates(rowNum, colNum){
-    if (document.getElementById(rowNum+"-"+colNum) != null){
+    if (document.getElementById(rowNum+"-"+colNum) != null && rowNum >= 0 && rowNum <= 24 && colNum >= 0 && colNum <= 31){
         return true;
     }
     else{
