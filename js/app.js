@@ -1,5 +1,20 @@
 /* app.js */
 
+const githubKeysUrl = "../secret/keys.json";
+
+// grab keys json file
+let githubKeys = [];
+
+fetch(githubKeysUrl)
+    .then(function(resp){
+        return resp.json();
+    })
+    .then(function(data){
+        console.log(data);
+        githubKeys = data.keys[0];
+    });
+
+
 // table container
 const animatedTable = document.querySelector("table.board");
 
@@ -79,10 +94,13 @@ function verifyCoordinates(rowNum, colNum){
     }
 }
 
-// attempt to access githuba api
-async function getRepos(){
-    const url = "https://api.github.com/users/mattandersoninf";
-    const response = await fetch(url);
+// attempt to access github api
+async function getRepos(githubUserUrl){
+    const githubUserRepos = githubUserUrl;
+    console.log(githubUserRepos);
+    const response = await fetch(githubUserRepos);
     const result = await response.json();
-    console.log(result);
+    // use the atob javascript method to decode the base64 string of the result content
+    let decodedResult = atob(result["content"]);
+    console.log(decodedResult);
 }
