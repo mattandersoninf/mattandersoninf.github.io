@@ -78,3 +78,11 @@ function verifyCoordinates(rowNum, colNum){
         return false;
     }
 }
+
+// attempt to access githuba api
+async function getRepos(){
+    const url = "https://api.github.com/users/mattandersoninf";
+    const response = await fetch(url);
+    const result = await response.json();
+    console.log(result);
+}
