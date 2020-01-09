@@ -11,6 +11,10 @@
 }
 
 /* jumbotron */
+.jumbotron {
+  z-index: 2;
+}
+
 /* table */
 .board {
   background-color: #212529;
