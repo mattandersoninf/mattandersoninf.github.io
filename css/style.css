@@ -1,4 +1,5 @@
 /* variables */
+/* typography */
 /* button */
 .bg-turq {
   color: white;
@@ -11,8 +12,16 @@
 }
 
 /* jumbotron */
+main {
+  position: relative;
+}
+
 .jumbotron {
-  z-index: 2;
+  z-index: 1;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  /* this allows the animation table underneath to be interacted with */
+  pointer-events: none;
 }
 
 /* table */
@@ -20,10 +29,18 @@
   background-color: #212529;
 }
 
+table {
+  z-index: 3;
+}
+
+tbody {
+  z-index: 3;
+}
+
 td {
   border: 1px solid transparent;
   padding-top: 3%;
-  z-index: 2;
+  z-index: 100;
 }
 
 .animate-table-cell {

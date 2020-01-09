@@ -4,10 +4,18 @@
     background-color: $table-background-color;
 }
 
+table{
+    z-index: 3;
+}
+
+tbody{
+    z-index: 3;
+}
+
 td{
     border: 1px solid $table-td-border-color;
     padding-top: 3%;
-    z-index: 2;
+    z-index: 100;
 }
 
 .animate-table-cell{

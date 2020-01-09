@@ -1,5 +1,14 @@
 /* jumbotron */ 
 
+
+main{
+    position: relative;
+}
+
 .jumbotron{
-    z-index: 2;
+    z-index: 1;
+    position: absolute;
+    background-color: rgba(0,0,0,0);
+    /* this allows the animation table underneath to be interacted with */
+    pointer-events: none;
 }
