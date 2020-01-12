@@ -19,6 +19,7 @@ main {
 .jumbotron {
   z-index: 1;
   position: absolute;
+  left: 20%;
   background-color: rgba(0, 0, 0, 0);
   /* this allows the animation table underneath to be interacted with */
   pointer-events: none;
