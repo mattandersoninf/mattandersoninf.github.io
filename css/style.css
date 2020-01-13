@@ -19,11 +19,13 @@ main {
 .jumbotron {
   z-index: 1;
   position: absolute;
-  left: 50%;
-  right: 50%;
+  left: 7%;
+  right: 20%;
   background-color: rgba(0, 0, 0, 0);
   /* this allows the animation table underneath to be interacted with */
   pointer-events: none;
+}
+.jumbotron h1 {
   margin: auto;
 }
 
