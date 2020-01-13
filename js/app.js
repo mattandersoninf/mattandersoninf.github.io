@@ -94,6 +94,7 @@ function verifyCoordinates(rowNum, colNum){
     }
 }
 
+/*
 // attempt to access github api
 async function getRepos(githubUserUrl){
     const githubUserRepos = githubUserUrl;
@@ -104,3 +105,4 @@ async function getRepos(githubUserUrl){
     let decodedResult = atob(result["content"]);
     console.log(decodedResult);
 }
+*/
