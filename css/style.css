@@ -1,17 +1,6 @@
 /* variables */
 /* typography */
-/* button */
-.bg-turq {
-  color: white;
-  background-color: #80e1ff;
-}
-
-.bg-turq:hover {
-  color: white;
-  background-color: #00c3ff;
-}
-
-/* jumbotron */
+/* main */
 body {
   height: 100vh;
   width: 100%;
@@ -19,8 +8,10 @@ body {
 
 main {
   height: 100%;
+  width: 100%;
 }
 
+/* jumbotron */
 .jumbotron {
   z-index: 1;
   position: absolute;
@@ -82,6 +73,20 @@ td {
     background-color: transparent;
     border-radius: 1%;
   }
+}
+/* button */
+.bg-turq {
+  color: white;
+  background-color: #80e1ff;
+}
+
+.bg-turq:hover {
+  color: white;
+  background-color: #00c3ff;
+}
+
+.card ul {
+  list-style-type: none;
 }
 
 /*# sourceMappingURL=style.css.map */
