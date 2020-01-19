@@ -168,17 +168,21 @@ function desktopScreenProjectColumnSize(){
 
 }
 
+/*************************************************************
+ *  COLLAPSIBLE NAVBAR
+ *  Hide the collapsible navbar if it's open.
+ ***********************************************************/
 $("#navbarSupportedContent").on('show.bs.collapse', function() {
   $('a.nav-link').click(function() {
       $("#navbarSupportedContent").collapse('hide');
   });
 });
 
-/*******************************
+/*************************************************************
  *  SMOOTH SCROLLING 
- * 
- * 
- *********************************/
+ *  Use jQuery animate function to scroll smoothly to  
+ *  different parts of the page.
+ ***********************************************************/
  $(document).ready(function(){
   
   $("a.nav-link").on('click', function(event) {
