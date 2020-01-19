@@ -20,11 +20,8 @@
 					<a class="navbar-brand order-1" href="#">MA</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarSupportedContent">
 						<span class="navbar-toggler-icon"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
 					</button>
-					<div class="collapse navbar-collapse" id="collapsibleNavbar">
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav">
 							<li class="nav-item active">
 								<a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
@@ -33,18 +30,15 @@
 								<a class="nav-link" href="#projects">Projects</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#timeline">Timeline</a>
-							</li>
-							<li class="nav-item">
 								<a class="nav-link" href="#contact">Contact</a>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</nav>
-			<div id="home" class="jumbotron jumbotron-fluid text-white text-center">
+			<section id="home" class="jumbotron jumbotron-fluid text-white text-center">
 				<h1 class="display-4 px-2">Hi, I'm Matt Anderson.</h1>
-			</div>
+			</section>
 			<table class="board container-fluid"> 
 				<tbody>
 					<tr id="row-0">
@@ -876,8 +870,8 @@
 					</tr>
 				</tbody>
 			</table>
-			<h2 id="projects" class="display-4 text-center my-5 text-muted">Projects</h2>
-			<div class="container">
+			<section class="container" id="projects">
+				<h2 class="display-4 text-center my-5 text-muted">Projects</h2>
 				<div class="project-container text-center row justify-content-md-center">
 					<div class="project-card mx-3 px-0">
 						<div class="card mb-3">
@@ -977,8 +971,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div id="timeline"></div>
+			</section>
 		</main>
 		<footer id="contact" class="bg-dark py-5 text-white text-center">
 			<h2 class="display-4 my-5">Contact</h2>
