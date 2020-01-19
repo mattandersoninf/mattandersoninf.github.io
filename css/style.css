@@ -10,6 +10,11 @@ main {
   width: 100%;
 }
 
+/* navigation */
+.navbar-collapse.collapse.in {
+  display: block !important;
+}
+
 /* jumbotron */
 .jumbotron {
   z-index: 1;
@@ -92,6 +97,14 @@ td {
   border-radius: 6px;
   padding: 5px 10px;
   margin: 2px;
+}
+
+.project-card.col-xs-3 {
+  max-width: 45%;
+}
+
+.project-card.col-xs-1 {
+  max-width: 30%;
 }
 
 /* footer */

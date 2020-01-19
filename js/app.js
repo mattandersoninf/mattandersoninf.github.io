@@ -116,12 +116,12 @@ function mobileScreenProjectColumnSize(){
       projectCard.classList.add('col-xs-12');
     }
 
-    if(projectCard.classList.contains('col-xs-6')){
-      projectCard.classList.remove('col-xs-6');
-    }
-    
     if(projectCard.classList.contains('col-xs-3')){
       projectCard.classList.remove('col-xs-3');
+    }
+    
+    if(projectCard.classList.contains('col-xs-1')){
+      projectCard.classList.remove('col-xs-1');
     }
 
   });
@@ -136,12 +136,12 @@ function tabletScreenProjectColumnSize(){
       projectCard.classList.remove('col-xs-12');
     }
     
-    if(!(projectCard.classList.contains('col-xs-6'))){
-      projectCard.classList.add('col-xs-6');
+    if(!(projectCard.classList.contains('col-xs-3'))){
+      projectCard.classList.add('col-xs-3');
     }
 
-    if(projectCard.classList.contains('col-xs-3')){
-      projectCard.classList.remove('col-xs-3');
+    if(projectCard.classList.contains('col-xs-1')){
+      projectCard.classList.remove('col-xs-1');
     }
 
   });
@@ -156,17 +156,23 @@ function desktopScreenProjectColumnSize(){
       projectCard.classList.remove('col-xs-12');
     }
     
-    if(projectCard.classList.contains('col-xs-6')){
-      projectCard.classList.remove('col-xs-6');
+    if(projectCard.classList.contains('col-xs-3')){
+      projectCard.classList.remove('col-xs-3');
     }
     
-    if(!(projectCard.classList.contains('col-xs-3'))){
-      projectCard.classList.add('col-xs-3');
+    if(!(projectCard.classList.contains('col-xs-1'))){
+      projectCard.classList.add('col-xs-1');
     }
 
   });
 
 }
+
+$("#navbarSupportedContent").on('show.bs.collapse', function() {
+  $('a.nav-link').click(function() {
+      $("#navbarSupportedContent").collapse('hide');
+  });
+});
 
 /*******************************
  *  SMOOTH SCROLLING 
