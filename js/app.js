@@ -1,20 +1,5 @@
 /* app.js */
 
-const githubKeysUrl = "../secret/keys.json";
-
-// grab keys json file
-let githubKeys = [];
-
-fetch(githubKeysUrl)
-    .then(function(resp){
-        return resp.json();
-    })
-    .then(function(data){
-        console.log(data);
-        githubKeys = data.keys[0];
-    });
-
-
 // table container
 const animatedTable = document.querySelector("table.board");
 
@@ -94,18 +79,94 @@ function verifyCoordinates(rowNum, colNum){
     }
 }
 
-/*
-// attempt to access github api
-async function getRepos(githubUserUrl){
-    const githubUserRepos = githubUserUrl;
-    console.log(githubUserRepos);
-    const response = await fetch(githubUserRepos);
-    const result = await response.json();
-    // use the atob javascript method to decode the base64 string of the result content
-    let decodedResult = atob(result["content"]);
-    console.log(decodedResult);
+/*************************************************************
+ *  RESIZING FUNCTIONS
+ *  When the screen size is altered, call the resizing
+ *  functions.
+ * ***********************************************************/
+window.addEventListener('resize', function(){
+
+  
+  currWindowWidth = window.innerWidth;
+
+  if(currWindowWidth >= 1024){
+
+    desktopScreenProjectColumnSize();
+
+  }
+  else if(currWindowWidth >= 768 && currWindowWidth < 1024){
+
+    tabletScreenProjectColumnSize();
+
+  }
+  else{
+
+    mobileScreenProjectColumnSize();
+  }
+  
+
+});
+
+
+function mobileScreenProjectColumnSize(){
+
+  document.querySelectorAll('.project-card').forEach(projectCard => {
+    
+    if(!(projectCard.classList.contains('col-xs-12'))){
+      projectCard.classList.add('col-xs-12');
+    }
+
+    if(projectCard.classList.contains('col-xs-6')){
+      projectCard.classList.remove('col-xs-6');
+    }
+    
+    if(projectCard.classList.contains('col-xs-3')){
+      projectCard.classList.remove('col-xs-3');
+    }
+
+  });
+
+} 
+
+function tabletScreenProjectColumnSize(){
+
+  document.querySelectorAll('.project-card').forEach(projectCard => {
+    
+    if(projectCard.classList.contains('col-xs-12')){
+      projectCard.classList.remove('col-xs-12');
+    }
+    
+    if(!(projectCard.classList.contains('col-xs-6'))){
+      projectCard.classList.add('col-xs-6');
+    }
+
+    if(projectCard.classList.contains('col-xs-3')){
+      projectCard.classList.remove('col-xs-3');
+    }
+
+  });
+
 }
-*/
+
+function desktopScreenProjectColumnSize(){
+
+  document.querySelectorAll('.project-card').forEach(projectCard => {
+    
+    if(projectCard.classList.contains('col-xs-12')){
+      projectCard.classList.remove('col-xs-12');
+    }
+    
+    if(projectCard.classList.contains('col-xs-6')){
+      projectCard.classList.remove('col-xs-6');
+    }
+    
+    if(!(projectCard.classList.contains('col-xs-3'))){
+      projectCard.classList.add('col-xs-3');
+    }
+
+  });
+
+}
 
 /*******************************
  *  SMOOTH SCROLLING 
