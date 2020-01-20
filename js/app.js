@@ -26,7 +26,6 @@ function onLoad(){
  * ***********************************************************/
 animatedTable.addEventListener("click", function(){
     
-    // && !(event.target.classList.contains("animate-table-cell"))
     if (event.target.tagName == "TD" ){
         
         pulsePeachColor(event.target.id.substring(0, event.target.id.indexOf("-")), event.target.id.substring(event.target.id.indexOf("-")+1, event.target.id.length), Math.floor(Math.random()*4)+1);
