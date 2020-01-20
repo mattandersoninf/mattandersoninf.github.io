@@ -99,14 +99,6 @@ td {
   margin: 2px;
 }
 
-.project-card.col-xs-3 {
-  max-width: 45%;
-}
-
-.project-card.col-xs-1 {
-  max-width: 30%;
-}
-
 /* footer */
 footer {
   width: 100%;
@@ -148,6 +140,17 @@ a.github {
 
 a.social:hover {
   opacity: 1;
+}
+
+/* tablet */
+@media screen and (min-width: 768px) {
+  .project-card.col-xs-3 {
+    max-width: 45%;
+  }
+
+  .project-card.col-xs-1 {
+    max-width: 30%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
