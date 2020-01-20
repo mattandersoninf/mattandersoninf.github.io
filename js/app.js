@@ -1,7 +1,7 @@
 /* app.js */
 
 // table container
-const animatedTable = document.querySelector("table.board");
+var animatedTable = document.querySelector("table.board");
 
 /*************************************************************
  *  ON LOAD ANIMATION
@@ -9,9 +9,9 @@ const animatedTable = document.querySelector("table.board");
  *  on the animated to demonstrate the pulse effect. 
  * ***********************************************************/
 function onLoad(){
-    let rand1 = [Math.floor(Math.random()*24), Math.floor(Math.random()*32)];
-    let rand2 = [Math.floor(Math.random()*24), Math.floor(Math.random()*32)];
-    let rand3 = [Math.floor(Math.random()*24), Math.floor(Math.random()*32)];
+    var rand1 = [Math.floor(Math.random()*24), Math.floor(Math.random()*32)];
+    var rand2 = [Math.floor(Math.random()*24), Math.floor(Math.random()*32)];
+    var rand3 = [Math.floor(Math.random()*24), Math.floor(Math.random()*32)];
     pulsePeachColor(rand1[0],rand1[1],Math.floor(Math.random()*4)+1);
     pulsePeachColor(rand2[0],rand2[1],Math.floor(Math.random()*4)+1);
     pulsePeachColor(rand3[0],rand3[1],Math.floor(Math.random()*4)+1);
@@ -30,7 +30,6 @@ animatedTable.addEventListener("click", function(){
         
         pulsePeachColor(event.target.id.substring(0, event.target.id.indexOf("-")), event.target.id.substring(event.target.id.indexOf("-")+1, event.target.id.length), Math.floor(Math.random()*4)+1);
     
-        // tableCell.id.substring(0,tableCell.id.indexOf("-")), tableCell.id.substring(tableCell.id.indexOf("-")+1, tableCell.id.length)
     }
 
 });
@@ -87,7 +86,7 @@ function verifyCoordinates(rowNum, colNum){
 window.addEventListener('resize', function(){
 
   
-  currWindowWidth = window.innerWidth;
+  var currWindowWidth = window.innerWidth;
 
   if(currWindowWidth >= 1024){
 
