@@ -104,6 +104,7 @@ function resizeProjectCards(){
 
     mobileScreenProjectColumnSize();
   }
+  
 }
 
 
