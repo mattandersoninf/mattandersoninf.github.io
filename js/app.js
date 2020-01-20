@@ -9,12 +9,13 @@ var animatedTable = document.querySelector("table.board");
  *  on the animated to demonstrate the pulse effect. 
  * ***********************************************************/
 function onLoad(){
-    var rand1 = [Math.floor(Math.random()*24), Math.floor(Math.random()*32)];
-    var rand2 = [Math.floor(Math.random()*24), Math.floor(Math.random()*32)];
-    var rand3 = [Math.floor(Math.random()*24), Math.floor(Math.random()*32)];
-    pulsePeachColor(rand1[0],rand1[1],Math.floor(Math.random()*4)+1);
-    pulsePeachColor(rand2[0],rand2[1],Math.floor(Math.random()*4)+1);
-    pulsePeachColor(rand3[0],rand3[1],Math.floor(Math.random()*4)+1);
+  resizeProjectCards();
+  var rand1 = [Math.floor(Math.random()*24), Math.floor(Math.random()*32)];
+  var rand2 = [Math.floor(Math.random()*24), Math.floor(Math.random()*32)];
+  var rand3 = [Math.floor(Math.random()*24), Math.floor(Math.random()*32)];
+  pulsePeachColor(rand1[0],rand1[1],Math.floor(Math.random()*4)+1);
+  pulsePeachColor(rand2[0],rand2[1],Math.floor(Math.random()*4)+1);
+  pulsePeachColor(rand3[0],rand3[1],Math.floor(Math.random()*4)+1);
 }
 
 /*************************************************************
@@ -83,8 +84,9 @@ function verifyCoordinates(rowNum, colNum){
  *  When the screen size is altered, call the resizing
  *  functions.
  * ***********************************************************/
-window.addEventListener('resize', function(){
+window.addEventListener('resize', resizeProjectCards());
 
+function resizeProjectCards(){
   
   var currWindowWidth = window.innerWidth;
 
@@ -102,9 +104,7 @@ window.addEventListener('resize', function(){
 
     mobileScreenProjectColumnSize();
   }
-  
-
-});
+}
 
 
 function mobileScreenProjectColumnSize(){
