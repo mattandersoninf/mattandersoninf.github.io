@@ -43,27 +43,22 @@ animatedTable.addEventListener("click", function(){
  * ***********************************************************/
 function pulsePeachColor(rowNum, colNum, pulseDepth){
     
-  if(pulseDepth > -1 && verifyCoordinates(rowNum, colNum)){
+  if(pulseDepth > -1 && verifyCoordinates(rowNum, colNum) && (!(document.getElementById(rowNum+"-"+colNum).classList.contains("animate-table-cell")))){
+        
+    document.getElementById(rowNum+"-"+colNum).classList.add("animate-table-cell");
 
-      if(!(document.getElementById(rowNum+"-"+colNum).classList.contains("animate-table-cell"))){
-          
-          document.getElementById(rowNum+"-"+colNum).classList.add("animate-table-cell");
+    window.setTimeout(function() {
+        document.getElementById(rowNum+"-"+colNum).classList.remove('animate-table-cell');
 
-          
-          window.setTimeout(function() {
-              document.getElementById(rowNum+"-"+colNum).classList.remove('animate-table-cell');
+    },500);
 
-          },500);
-
-          window.setTimeout(function() {
-              pulsePeachColor(parseInt(rowNum,10)+1,parseInt(colNum,10),pulseDepth-1);
-              pulsePeachColor(parseInt(rowNum,10),parseInt(colNum,10)+1,pulseDepth-1);
-              pulsePeachColor(parseInt(rowNum,10)-1,parseInt(colNum,10),pulseDepth-1);
-              pulsePeachColor(parseInt(rowNum,10),parseInt(colNum,10)-1,pulseDepth-1); 
-          },200); 
-
-      }
-      
+    window.setTimeout(function() {
+        pulsePeachColor(parseInt(rowNum,10)+1,parseInt(colNum,10),pulseDepth-1);
+        pulsePeachColor(parseInt(rowNum,10),parseInt(colNum,10)+1,pulseDepth-1);
+        pulsePeachColor(parseInt(rowNum,10)-1,parseInt(colNum,10),pulseDepth-1);
+        pulsePeachColor(parseInt(rowNum,10),parseInt(colNum,10)-1,pulseDepth-1); 
+    },200); 
+  
   }
 
 }
