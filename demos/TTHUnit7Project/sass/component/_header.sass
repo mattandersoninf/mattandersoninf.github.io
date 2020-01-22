@@ -1,0 +1,52 @@
+/* header */
+
+header
+  margin: 0 auto
+  padding: 0
+  width: 100%
+  background-color: $header-background-color
+  color: $header-color
+
+.header-container
+  display: flex
+  justify-content: space-between
+  width: 100%
+  margin: auto
+  padding: $gutter-space 0
+
+.app-name
+  float: left
+  margin-left: $gutter-space
+
+.profile-container
+  margin: auto $gutter-space
+
+.profile-container > div
+  float: right
+  margin: auto 5px
+
+.user-name
+  border-left: 1px solid white
+  margin-left: 3px
+  padding-left: 3px
+
+.notification
+  padding-right: 5px
+  border-radius: 5px
+
+.notification svg
+  border-radius: 5px
+  transition-duration: .3s
+
+.notification svg:hover
+  background-color: $notification-background-color
+
+.notification-marker
+  position: absolute
+  top: 5px
+  right: 160px
+  padding: 1px 6px
+  z-index: 2
+  border-radius: 50%
+  color: red
+  background-color: red

@@ -1,0 +1,10 @@
+/* mixins */
+
+@mixin std-space
+  margin: $gutter-space 0
+  padding: $gutter-space 0
+
+@mixin media-query($desktop-screen)
+    @media #{$desktop-screen}
+        @content
+    

@@ -1,0 +1,41 @@
+.btn {
+    margin-top: 15px;
+    width: 100%;
+    color: $white;
+    border: none;
+    padding: $spacing-gutter 0;
+    text-transform: uppercase;
+    border-radius: $all-border-radius;
+    @include light-on-hover($light-cyan);
+}
+
+.btn + .btn{
+    @include media-query($tablet){
+        margin-left: 10px;
+    }
+}
+
+.default {
+    background-color: $light-cyan; 
+    @include light-on-hover($light-cyan);
+}
+
+.error {
+    background-color: $geraldine;
+    @include light-on-hover($geraldine);
+}
+
+.info {
+    background-color: $true-v;
+    @include light-on-hover($true-v);
+}
+
+.success {
+    background-color: $emerald;
+    @include light-on-hover($emerald);
+}
+
+.warning {
+    background-color: $coral;
+    @include light-on-hover($coral);
+}
