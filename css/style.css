@@ -11,7 +11,7 @@ main {
 }
 
 a {
-  color: white;
+  text-decoration: none;
 }
 
 /* navigation */
@@ -103,6 +103,16 @@ td {
   margin: 2px;
 }
 
+.card-links a {
+  color: white;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+.card-links a:hover {
+  text-decoration: none;
+  opacity: 1;
+}
+
 /* footer */
 footer {
   width: 100%;
@@ -149,11 +159,11 @@ a.social:hover {
 /* tablet */
 @media screen and (min-width: 768px) {
   .project-card.col-xs-3 {
-    max-width: 45%;
+    width: 45%;
   }
 
   .project-card.col-xs-1 {
-    max-width: 30%;
+    width: 30%;
   }
 }
 
