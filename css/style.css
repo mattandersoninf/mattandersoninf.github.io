@@ -10,6 +10,10 @@ main {
   width: 100%;
 }
 
+a {
+  color: white;
+}
+
 /* navigation */
 .navbar-collapse.collapse.in {
   display: block !important;
