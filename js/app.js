@@ -9,6 +9,7 @@ var animatedTable = document.querySelector("table.board");
  *  on the animated to demonstrate the pulse effect. 
  * ***********************************************************/
 function onLoad(){
+  showAndHideTableCells();
   resizeProjectCards();
   var rand1 = [Math.floor(Math.random()*24), Math.floor(Math.random()*32)];
   var rand2 = [Math.floor(Math.random()*24), Math.floor(Math.random()*32)];
@@ -83,7 +84,13 @@ function verifyCoordinates(rowNum, colNum){
  *  When the screen size is altered, call the resizing
  *  functions.
  * ***********************************************************/
-window.addEventListener('resize', resizeProjectCards());
+window.addEventListener('resize', () => {
+
+  showAndHideTableCells();
+
+  resizeProjectCards();
+
+});
 
 function resizeProjectCards(){
   
@@ -103,6 +110,36 @@ function resizeProjectCards(){
 
     mobileScreenProjectColumnSize();
   }
+
+}
+
+function showAndHideTableCells(){
+  
+  var currWindowWidth = window.innerWidth;
+
+  if(currWindowWidth >= 768){
+
+    for(var i=16; i < 24; i++){
+      for(var j = 0; j < 32; j++){
+        
+        document.getElementById(i+'-'+j).style.display = 'none';
+        
+      }
+    }
+
+  }
+  else{
+
+    for(var i=16; i < 24; i++){
+      for(var j = 0; j < 32; j++){
+        
+        document.getElementById(i+'-'+j).style.display = 'table-cell';
+        
+      }
+    }
+
+  }
+
 
 }
 
