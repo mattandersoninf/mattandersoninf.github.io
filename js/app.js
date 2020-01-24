@@ -13,9 +13,9 @@ function onLoad(){
   var rand1 = [Math.floor(Math.random()*24), Math.floor(Math.random()*32)];
   var rand2 = [Math.floor(Math.random()*24), Math.floor(Math.random()*32)];
   var rand3 = [Math.floor(Math.random()*24), Math.floor(Math.random()*32)];
-  pulsePeachColor(rand1[0],rand1[1],Math.floor(Math.random()*4)+1);
-  pulsePeachColor(rand2[0],rand2[1],Math.floor(Math.random()*4)+1);
-  pulsePeachColor(rand3[0],rand3[1],Math.floor(Math.random()*4)+1);
+  pulsePeachColor(5,8,Math.floor(Math.random()*4)+1);
+  pulsePeachColor(5,16,Math.floor(Math.random()*4)+1);
+  pulsePeachColor(5,24,Math.floor(Math.random()*4)+1);
 }
 
 /*************************************************************
