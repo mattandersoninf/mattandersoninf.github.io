@@ -93,10 +93,15 @@ td {
   background-color: #00c3ff;
 }
 
-.card ul {
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 50em;
+}
+.card-body ul {
   list-style-type: none;
 }
-
 .card-body ul li {
   border-radius: 6px;
   padding: 5px 10px;
@@ -164,6 +169,7 @@ a.social:hover {
 
   .project-card.col-xs-1 {
     width: 30%;
+    max-width: 360px;
   }
 }
 

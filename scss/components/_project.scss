@@ -10,14 +10,20 @@
     background-color: rgb(0, 195, 255);
 }
 
-.card ul{
-    list-style-type: none;
-}
-
-.card-body ul li {
-	border-radius: 6px;
-	padding: 5px 10px;
-	margin: 2px;
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 50em; 
+    ul{
+        list-style-type: none;
+        
+        li {
+            border-radius: 6px;
+            padding: 5px 10px;
+            margin: 2px;
+        }
+    }
 }
 
 .card-links{
