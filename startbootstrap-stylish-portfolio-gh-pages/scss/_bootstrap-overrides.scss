@@ -44,6 +44,13 @@ a {
   background-color: $primary !important;
 }
 
+.bg-black-cross{
+  background-image: url("../img/bg-black-cross.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+}
+
 .text-primary {
   color: $primary !important;
 }
