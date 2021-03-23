@@ -11,7 +11,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 0;
     padding: 0;
   }
@@ -21,4 +21,10 @@
       font-size: 5.5rem;
     }
   }
+}
+
+.icon-social-tiktok{
+  content:url("../img/tiktok-line.svg");
+  
+  margin: auto;
 }

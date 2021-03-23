@@ -44,9 +44,9 @@ a {
   background-color: $primary !important;
 }
 
-.bg-black-cross{
-  background-image: url("../img/bg-black-cross.jpg");
-  background-repeat: no-repeat;
+.bg-black-hex{
+  background-image: url("../img/bg-black-hex.jpg");
+  background-repeat:repeat;
   background-size: 100%;
   width: 100%;
 }
