@@ -1,3 +1,5 @@
+//service
+
 .service-icon {
   background-color: $white;
   color: $black;
@@ -10,12 +12,23 @@
   transition-duration: 0.2s;
 }
 
-.service-icon:hover + h4{
-  color: $primary;
-}
 
 .service-icon:hover{
-  background-color: $black;
+  background-color: $primary;
+  strong{
+    color: $primary;
+  }
+}
+
+
+.icon-social-tiktok{
+  display: block; 
+  margin: auto; 
+  width:45%; 
+  height:45%;
+}
+
+.icon-social-tiktok:hover{
   color: $primary;
 }
 

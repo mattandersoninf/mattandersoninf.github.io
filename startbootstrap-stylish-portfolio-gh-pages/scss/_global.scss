@@ -7,6 +7,16 @@ html {
 body {
   @include body-font;
   color: $body-color;
+  background: transparent !important;
+}
+
+
+html { 
+  background: url("../img/bg-black-hex.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 // Custom Button Size
@@ -16,13 +26,7 @@ body {
 
 // Content Section
 .content-section {
-  padding-top: 7.5rem;
-  padding-bottom: 7.5rem;
-}
-
-.sm-content-section{
-  padding-top: 1.0vh;
-  padding-bottom: 1.0vh;
+  height: 100vh;
 }
 
 .content-section-heading {
@@ -61,11 +65,13 @@ h6 {
   }
 }
 
+/*
 @media (max-width: 320px) {
   h2{
     font-size: 1.17em !important;
   }
 }
+*/
 
 .map iframe {
   pointer-events: none;

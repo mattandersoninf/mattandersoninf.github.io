@@ -6,10 +6,6 @@
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background: linear-gradient(90deg, fade-out($white, 0.9) 0%, fade-out($white, 0.9) 100%), url('../img/bg-masthead.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
   h1 {
     font-size: 3rem;
     margin: 0;
@@ -21,10 +17,4 @@
       font-size: 5.5rem;
     }
   }
-}
-
-.icon-social-tiktok{
-  content:url("../img/tiktok-line.svg");
-  
-  margin: auto;
 }
