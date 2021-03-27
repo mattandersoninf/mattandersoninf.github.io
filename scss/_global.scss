@@ -6,7 +6,7 @@ html {
 
 body {
   @include body-font;
-  color: $body-color;
+  color: $body-color !important;
   background: transparent !important;
 }
 
@@ -25,8 +25,10 @@ html {
 }
 
 // Content Section
-.content-section {
-  height: 100vh;
+.content-section {  
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+  min-height: 100vh;
 }
 
 .content-section-heading {
@@ -38,6 +40,20 @@ html {
     text-transform: uppercase;
   }
 }
+
+.card-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+a:link{
+  color: white;
+}
+
+#project a{
+  padding: 1.25rem !important;
+} 
 
 // Typography
 h1,

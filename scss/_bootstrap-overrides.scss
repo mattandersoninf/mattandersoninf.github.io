@@ -1,5 +1,4 @@
 a {
-  color: $primary;
   &:hover,
   &:focus,
   &:active {
@@ -46,4 +45,8 @@ a {
 
 .text-secondary {
   color: $secondary !important;
+}
+
+.card{
+  min-height: 320px !important;
 }
