@@ -338,6 +338,10 @@ footer.footer .social-link:hover {
   background-color: #00cccc;
   text-decoration: none;
 }
+footer.footer input[type=submit], footer.footer input[type=reset] {
+  background-color: #a8a8a8;
+  color: white;
+}
 
 a:hover, a:focus, a:active {
   color: #00cccc;

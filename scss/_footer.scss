@@ -12,4 +12,10 @@ footer.footer {
       text-decoration: none;
     }
   }
+
+  input[type=submit], input[type=reset]{
+    background-color: #a8a8a8;
+    color: white;
+  }
+
 }
